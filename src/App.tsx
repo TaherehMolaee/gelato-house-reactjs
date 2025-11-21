@@ -1,12 +1,11 @@
+import Layout from "./components/layout";
 
 function App() {
-
-
   return (
-    <div className='bg-red-100'>
-      Hello
-    </div>
-  )
+    <Layout>
+      <div className="bg-red-100">Hello</div>
+    </Layout>
+  );
 }
 
-export default App
+export default App;
