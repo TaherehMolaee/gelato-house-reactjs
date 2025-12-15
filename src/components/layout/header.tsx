@@ -1,16 +1,51 @@
-import React from 'react'
-import Button from '../base/button'
+import React from "react";
+import Button from "../base/button";
+import Logo from "../base/logo";
+import Container from "../base/container";
 
-const Header:React.FC = () => {
+const Header: React.FC = () => {
   return (
     <header>
-        <Button>کلیک کن</Button>
-        <br />
-        <Button varient='outlined'>کلیک کن</Button>
-        <br />
-        <Button varient='text'>کلیک کن</Button>
+      <Container>
+        <div className="flex justify-between items-center py-2">
+          <div>
+            <Logo />
+          </div>
+          <div className="[&>Button]:mr-2 flex items-center">
+            <div className="hidden md:flex">
+              <Button
+                varient="text"
+                color="primary"
+                onClick={() => {
+                  console.log("Hello");
+                }}
+              >
+                سفارش اینترنتی
+              </Button>
+              <Button
+                varient="text"
+                color="primary"
+                onClick={() => {
+                  console.log("Hello");
+                }}
+              >
+                قوانین سایت
+              </Button>
+            </div>
+            <Button
+              varient="contained"
+              color="primary"
+              onClick={() => {
+                console.log("Hello");
+              }}
+            >
+              ورود
+            </Button>
+          </div>
+        </div>
+      </Container>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
